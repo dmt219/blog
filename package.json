@@ -9,10 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.26.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@fontsource/lexend-deca": "^4.5.12",
+    "@mantine/core": "^5.6.4",
+    "@mantine/hooks": "^5.6.4",
+    "@mantine/next": "^5.6.4",
+    "@tabler/icons": "^1.109.0",
+    "eslint": "8.22.0",
     "eslint-config-next": "13.0.1",
     "next": "13.0.1",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.24",
+    "autoprefixer": "^10.4.13",
+    "eslint-config-prettier": "^8.5.0",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
   }
 }
