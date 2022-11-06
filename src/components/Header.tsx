@@ -1,4 +1,3 @@
-import { Code } from "@mantine/core";
 import {
   createStyles,
   Header,
@@ -19,6 +18,7 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
     zIndex: 1,
     backgroundColor: "#f5f5f5",
+    fontFamily: "Lexend Deca",
   },
 
   dropdown: {
@@ -132,7 +132,9 @@ export default function HeaderResponsive({ links }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} mb="1.5rem" className={classes.root}>
       <Container className={classes.header}>
         <h1 className={classes.siteTitle}>
-          <Link href={"/"}>Duc Tran</Link>
+          <Link href={"/"} className="flex">
+            Duc Tran
+          </Link>
         </h1>
         <Group spacing={5} className={classes.links}>
           {items}
