@@ -11,14 +11,13 @@ import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT = 70;
 
 const useStyles = createStyles((theme) => ({
   root: {
     position: "relative",
     zIndex: 1,
     backgroundColor: "#f5f5f5",
-    fontFamily: "Lexend Deca",
   },
 
   dropdown: {
@@ -87,15 +86,16 @@ const useStyles = createStyles((theme) => ({
   },
 
   siteTitle: {
-    fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+    fontFamily: "Roboto, Helvetica Neue, Helvetica, Arial, sans-serif",
     fontSize: "40px",
     fontWeight: 700,
     hyphens: "auto",
     letterSpacing: "-1px",
-    lineHeight: 1,
+    lineHeight: 0.7,
     wordWrap: "break-word",
     margin: 0,
     position: "relative",
+    paddingTop: "10px",
     a: {
       position: "relative",
       textDecoration: "none",
@@ -104,11 +104,15 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface HeaderResponsiveProps {
-  links: { link: string; label: string }[];
-}
+const links = [
+  { link: "/about", label: "About" },
+  { link: "/algorithms", label: "Algorithms" },
+  { link: "/deconstructx", label: "Deconstruct X" },
+  { link: "/books", label: "Book Reviews" },
+  { link: "/blog", label: "Blog" },
+];
 
-export default function HeaderResponsive({ links }: HeaderResponsiveProps) {
+export default function HeaderResponsive() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { pathname } = useRouter();
   const { classes, cx } = useStyles();
@@ -131,11 +135,14 @@ export default function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb="1.5rem" className={classes.root}>
       <Container className={classes.header}>
-        <h1 className={classes.siteTitle}>
-          <Link href={"/"} className="flex">
-            Duc Tran
-          </Link>
-        </h1>
+        <div>
+          <h1 className={classes.siteTitle}>
+            <Link href={"/"} className="flex">
+              Duc Tran
+            </Link>
+          </h1>
+          <span className="text-xs text-gray-500">Software Engineer</span>
+        </div>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

@@ -1,4 +1,4 @@
-import "styles/global.css";
+import "styles/global.scss";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { Container, MantineProvider } from "@mantine/core";
@@ -7,12 +7,6 @@ import "@fontsource/lexend-deca";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
-  const links = [
-    { link: "/about", label: "About" },
-    { link: "/leetcode", label: "LeetCode" },
-    { link: "/deconstructx", label: "Deconstruct X" },
-  ];
-
   return (
     <>
       <Head>
@@ -29,9 +23,10 @@ export default function App(props: AppProps) {
         theme={{
           /** Put your mantine theme override here */
           colorScheme: "light",
+          fontFamily: "Lexend Deca",
         }}
       >
-        <Header links={links} />
+        <Header />
         <Container>
           <Component {...pageProps} />
         </Container>

@@ -2,11 +2,12 @@ import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles(() => ({
   dot: {
-    height: "25px",
-    width: "25px",
+    height: "20px",
+    width: "20px",
     borderRadius: "50%",
     borderWidth: "1px",
     display: "inline-block",
+    borderStyle: "groove",
   },
 }));
 export default function Dot({ color }) {

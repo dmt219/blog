@@ -35,8 +35,15 @@ export default function Tile({ id, difficulty }) {
           {id}
         </Text>
       ) : (
-        <Link href={`/leetcode/${id}`}>
-          <Text size="sm" className={"font-semibold flex justify-center"}>
+        <Link
+          href={`/algorithms/${id}`}
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <Text
+            size="sm"
+            className={"font-semibold flex justify-center"}
+            style={{ fontFamily: "Roberto" }}
+          >
             {id}
           </Text>
         </Link>
