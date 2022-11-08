@@ -1,7 +1,7 @@
 import BlogSkeleton from "src/components/Algorithms/BlogSkeleton";
 import { Prism } from "@mantine/prism";
 
-export default function LeetCode1() {
+export default function LeetCode5() {
   const naiveSolution = `
     class Solution:
       def dailyTemperatures(self, temperatures: List[int]) -> List[int]:

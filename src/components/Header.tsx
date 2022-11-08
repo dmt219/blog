@@ -108,7 +108,7 @@ const links = [
   { link: "/about", label: "About" },
   { link: "/algorithms", label: "Algorithms" },
   { link: "/deconstructx", label: "Deconstruct X" },
-  { link: "/books", label: "Book Reviews" },
+  { link: "/books", label: "Books" },
   { link: "/blog", label: "Blog" },
 ];
 

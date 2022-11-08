@@ -7,11 +7,7 @@ export default function BlogSkeleton(props) {
         <title>{props.title}</title>
       </Head>
       <div>
-        <h1 className="mb-6">
-          <a href={props.link} target="_blank" rel="noreferrer noopener">
-            {props.title}
-          </a>
-        </h1>
+        <h1 className="mb-6">{props.title}</h1>
         <div>{props.children}</div>
       </div>
     </>
