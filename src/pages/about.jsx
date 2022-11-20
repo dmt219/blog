@@ -10,11 +10,11 @@ export default function About() {
       <Head>
         <title>About Duc Tran</title>
       </Head>
-      <div>
+      <div className="text-[1.25rem]">
         <h1 className="mb-6">About me</h1>
         <div className="sm:flex gap-x-4">
           <div>
-            <p>
+            <p className="mt-0">
               Hi, I&apos;m Duc. I develop web applications at{" "}
               <a
                 href="https://ipvm.com"
